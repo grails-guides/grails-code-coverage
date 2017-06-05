@@ -1,0 +1,13 @@
+apply plugin: 'com.bmuschko.clover'
+
+dependencies {
+    clover 'org.openclover:clover:4.2.0'
+}
+
+clover {
+    licenseLocation = "${project.rootDir}/gradle/clover.license"
+    excludes = ['**/Bootstrap.groovy', '**/Application.groovy', '**/*GrailsPlugin.groovy']
+    report {
+        html = true
+    }
+}
