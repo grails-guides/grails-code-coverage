@@ -1,3 +1,13 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.bmuschko:gradle-clover-plugin:2.1.0'
+    }
+}
+
+
 apply plugin: 'com.bmuschko.clover'
 
 dependencies {
@@ -5,9 +15,18 @@ dependencies {
 }
 
 clover {
-    licenseLocation = "${project.rootDir}/gradle/clover.license"
-    excludes = ['**/Bootstrap.groovy', '**/Application.groovy', '**/*GrailsPlugin.groovy']
+    licenseLocation = File.createTempFile('clover', '.license').absolutePath
+
+    excludes = ['**/Application.groovy',
+                '**/BootStrap.groovy',
+                '**/UrlMappings.groovy',
+                '**/*GrailsPlugin.groovy',
+                '**/*Mock.groovy',
+    ]
+
+    testIncludes = ['**/*Spec.groovy']
     report {
         html = true
+        xml = true
     }
 }
