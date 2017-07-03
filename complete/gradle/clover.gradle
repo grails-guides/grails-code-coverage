@@ -7,7 +7,6 @@ buildscript {
     }
 }
 
-
 apply plugin: 'com.bmuschko.clover'
 
 dependencies {
@@ -15,17 +14,17 @@ dependencies {
 }
 
 clover {
-    licenseLocation = File.createTempFile('clover', '.license').absolutePath
+    licenseLocation = File.createTempFile('clover', '.license').absolutePath // <1>
 
-    excludes = ['**/Application.groovy',
+    excludes = ['**/Application.groovy', // <2>
                 '**/BootStrap.groovy',
                 '**/UrlMappings.groovy',
                 '**/*GrailsPlugin.groovy',
                 '**/*Mock.groovy',
     ]
 
-    testIncludes = ['**/*Spec.groovy']
-    report {
+    testIncludes = ['**/*Spec.groovy'] // <3>
+    report { // <4>
         html = true
         xml = true
     }

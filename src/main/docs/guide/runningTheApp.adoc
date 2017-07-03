@@ -1,1 +1,6 @@
-include::{commondir}/common-runapp.adoc[]
+To generate the code coverage report use the `./gradlew cloverGenerateReport` command
+which will generate the reports under: `build/reports/clover/html/index.html`
+
+Explore your report and improve the project coverage:
+
+image::report.png[]
