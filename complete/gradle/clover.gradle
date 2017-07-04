@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.bmuschko:gradle-clover-plugin:2.1.0'
+        classpath 'com.bmuschko:gradle-clover-plugin:2.1.1'
     }
 }
 
