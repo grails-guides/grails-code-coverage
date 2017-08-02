@@ -1,10 +1,9 @@
 package demo
 
-import grails.test.mixin.TestFor
+import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-@TestFor(NameService)
-class NameServiceSpec extends Specification {
+class NameServiceSpec extends Specification implements ServiceUnitTest<NameService> {
 
     def "findAllPersonNames differentiates between names containing the substring 'del'"() {
 
