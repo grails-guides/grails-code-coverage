@@ -25,3 +25,4 @@ include::{sourcedir}/build.gradle[]
 <1> Add the plugin as a build script depedency
 <2> Apply the build file with Clover configuration.
 <3> Currently, you need to add the groovy dependency for Clover Gradle plugin to work.
+<4> Exclude this library to avoid problems using docker with tomcat in the deployment
