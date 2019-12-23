@@ -56,6 +56,8 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.4.0.Final"
     compile "org.grails.plugins:gsp"
     compile 'org.codehaus.groovy:groovy-all:2.4.10'// <3>
+    compile "io.micronaut:micronaut-inject-groovy"
+
     console "org.grails:grails-console"
     profile "org.grails.profiles:web"
     runtime "org.glassfish.web:el-impl:2.1.2-b03"
