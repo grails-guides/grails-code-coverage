@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'com.bmuschko.clover'
 
 dependencies {
-    clover 'org.openclover:clover:4.2.0'
+    clover 'org.openclover:clover:4.4.1'
 }
 
 clover {
