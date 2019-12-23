@@ -8,7 +8,7 @@ class NameService {
     PersonGormService personGormService
 
     List<Name> findAllPersonNames() {
-        personGormService.findAllActive().collect { Person person ->
+        personGormService.findAllByActive().collect { Person person ->
           nameWithFullName(person.name)
         }
     }

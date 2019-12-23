@@ -1,12 +1,11 @@
 package demo
 
-import grails.gorm.transactions.Transactional
+import grails.gorm.services.Service
+import grails.gorm.transactions.ReadOnly
 
-@Transactional
-class PersonGormService {
+@Service(Person)
+interface PersonGormService {
 
-    @Transactional(readOnly = true)
-    List<Person> findAllActive() {
-        Person.where { active == true }.list()
-    }
+    @ReadOnly
+    List<Person> findAllByActive()
 }

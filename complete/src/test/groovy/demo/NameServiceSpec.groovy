@@ -9,7 +9,7 @@ class NameServiceSpec extends Specification implements ServiceUnitTest<NameServi
 
         given:
         service.personGormService = Stub(PersonGormService) {
-            findAllActive() >> [
+            findAllByActive() >> [
                     // new Person(name: 'Sergio del Amo', active: true), // <1>
                     new Person(name: 'Graeme Rocher', active: true),]
         }
