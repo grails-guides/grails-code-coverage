@@ -24,7 +24,6 @@ apply plugin:"com.bertramlabs.asset-pipeline"
 apply from: "${project.projectDir}/gradle/clover.gradle"  // <2>
 
 repositories {
-    mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
 }
 
